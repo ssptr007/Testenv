@@ -6,4 +6,4 @@ jobs:
       - run:
 	  name: Check scripts
           command: |
-  	    ./test.sh
+  	    bash /root/script/test.sh
