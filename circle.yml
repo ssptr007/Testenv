@@ -1,9 +1,26 @@
 version: 2
 jobs:
-  shellcheck:
+  build:
     docker:
-      - image: nlknguyen/alpine-shellcheck:v0.4.6
-    dependencies:
-    pre:
-    - ./root/script/test.sh
-	  
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: Print the Current Time
+          command: date
+     # - run:
+       #   name: execute the current script
+        ##  command: 
+            #  - bash ./test.sh
+dependencies:
+  pre:
+    - sudo apt-get update -y
+    - sudo apt-get install -y libgdal-dev
+    - sudo apt-get install -y postgis
+    - sudo apt-get install -y postgresql-client
+    - sudo apt-get install -y python-virtualenv
+    - python -m venv venv
+    - bash ./test.sh
