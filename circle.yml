@@ -3,9 +3,16 @@ jobs:
   build:
     docker:
       - image: debian:stretch
-    steps
+    steps:
       - checkout
       - run:
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: Print the Current Time
+          command: date
+      - run:
+          name: execute the current script
           bash ./test.sh
 dependencies:
   pre:
