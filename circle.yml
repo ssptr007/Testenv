@@ -4,15 +4,8 @@ jobs:
     docker:
       - image: debian:stretch
     steps:
-      - checkout
       - run:
-          name: Greeting
-          command: echo Hello, world.
-      - run:
-          name: Print the Current Time
-          command: date
-      - run:
-          bash ./test.sh
+          bash test.sh
 dependencies:
   pre:
     - sudo apt-get update -y
