@@ -9,7 +9,7 @@ jobs:
           name: Greeting
           command: echo Hello, world.
       - run:
-          name: Print the Current Time
+          name: Print the Current 
           command: date
       - run:
           bash ./test.sh
