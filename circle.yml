@@ -3,13 +3,8 @@ jobs:
   build:
     docker:
       - image: debian:stretch
-    steps:
-      - run:
-          name: Greeting
-          Command: echo Hello world
-      - run:
-          name: Print the current time and date
-          command: date
+    steps
+      - checkout
       - run:
           bash ./test.sh
 dependencies:
@@ -20,5 +15,4 @@ dependencies:
     - sudo apt-get install -y postgresql-client
     - sudo apt-get install -y python-virtualenv
     - python -m venv venv
-    
-    
+    - bash ./test.sh
