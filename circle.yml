@@ -12,7 +12,6 @@ jobs:
           name: Print the Current Time
           command: date
       - run:
-          name: execute the current script
           bash ./test.sh
 dependencies:
   pre:
