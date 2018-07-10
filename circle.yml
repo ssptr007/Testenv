@@ -12,8 +12,7 @@ jobs:
           command: date
       - run:
           name: Execute the current script
-          command:
-            bash ./test.sh
+          bash ./test.sh
 dependencies:
   pre:
     - sudo apt-get update -y
