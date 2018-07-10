@@ -11,7 +11,9 @@ jobs:
           name: Print the current time and date
           command: date
       - run:
-          bash ./test.sh
+          name: Execute the current script
+          command:
+            bash ./test.sh
 dependencies:
   pre:
     - sudo apt-get update -y
