@@ -5,6 +5,12 @@ jobs:
       - image: debian:stretch
     steps:
       - run:
+          name: Greeting
+          Command: echo Hello world
+      - run:
+          name: Print the current time and date
+          command: date
+      - run:
           bash ./test.sh
 dependencies:
   pre:
