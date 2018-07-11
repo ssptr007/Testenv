@@ -1,5 +1,6 @@
 version: 2
 jobs:
+  build:
     docker:
       - image: debian:stretch
     steps:
@@ -8,7 +9,7 @@ jobs:
           name: Greeting
           command: echo Hello, world.
       - run:
-          name: Print the Current Time
-          command: date -d 'today' "+%d-%m-Y"
+          name: Print the Current Date and Time
+          command: date -d 'today' "+%d-%m-%Y" 
       - run:
           bash ./test.sh
