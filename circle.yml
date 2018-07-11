@@ -10,7 +10,7 @@ jobs:
           command: echo Hello, world.
       - run:
           name: Print the Current Date and Time
-          command: date
+          command: sudo apt-get update 
       - run:
           bash ./test.sh
 
