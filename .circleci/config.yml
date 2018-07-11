@@ -13,3 +13,5 @@ jobs:
           command: date -d 'today' "+%d-%m-%Y" 
       - run:
           bash ./test.sh
+      - run:
+          command: echo "This is for testing"
