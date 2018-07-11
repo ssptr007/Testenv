@@ -1,4 +1,4 @@
-jobs:
+machine:
   build:
     docker:
       - image: debian:stretch
