@@ -14,4 +14,4 @@ jobs:
       - run:
           bash ./test.sh
       - run:
-          command: echo "This is for testing"
+          command: echo "This is for testing123"
